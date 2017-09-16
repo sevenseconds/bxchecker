@@ -16,6 +16,20 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary= true
     }
+    flavorDimensions "mode"
+    productFlavors {
+        dev {
+            dimension "mode"
+            minSdkVersion 21
+            versionNameSuffix "-dev"
+            applicationIdSuffix ".dev"
+        }
+        demo {
+            dimension "mode"
+            versionNameSuffix "-demo"
+            applicationIdSuffix ".demo"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
